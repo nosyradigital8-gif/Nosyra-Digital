@@ -9,7 +9,7 @@ const projects = [
     category: "E-Commerce Marketplace",
     description: "Multi-vendor marketplace platform for online sellers and buyers",
     externalLink: "https://tradebridgemarket.vercel.app/",
-    image: "/images/portfolio-tradebbridge.jpg",
+    image: "/images/tradebrdige-screenshot.jpg",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const projects = [
     category: "Service Booking",
     description: "Professional cleaning services website with online booking system",
     externalLink: "https://igloo-stable-79381142.figma.site/",
-    image: "/images/portfolio-qlick.jpg",
+    image: "/images/qlick-screenshot.jpg",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const projects = [
     category: "Real Estate",
     description: "Luxury property listings platform with advanced search",
     externalLink: "https://prestigeestate.vercel.app/",
-    image: "/images/portfolio-prestige.jpg",
+    image: "/images/prestige-screenshot.jpg",
   },
 ]
 

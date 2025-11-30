@@ -33,17 +33,17 @@ export function Header() {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link href="#home" className="flex items-center gap-2 flex-shrink-0 hover:opacity-80 transition-opacity">
-              <div className="w-12 h-12 relative">
+              <div className="w-16 h-16 relative">
                 <Image
                   src="/images/20251130-182150.png"
                   alt="Nosyra Digital"
-                  width={48}
-                  height={48}
+                  width={64}
+                  height={64}
                   className="object-contain"
                   priority
                 />
               </div>
-              <span className="text-lg font-bold text-[#0a0e27] hidden sm:inline">Nosyra</span>
+              <span className="text-xl font-bold text-[#0a0e27] hidden sm:inline">Nosyra</span>
             </Link>
 
             {/* Desktop Menu */}

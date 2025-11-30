@@ -97,10 +97,10 @@ export function Footer() {
                 Chat on WhatsApp
               </a>
               <a
-                href="mailto:info@nosyradigital.com"
+                href="mailto:info@nosyradigital.com.ng"
                 className="text-[#64748b] hover:text-[#00d4ff] transition-colors text-sm block"
               >
-                info@nosyradigital.com
+                info@nosyradigital.com.ng
               </a>
             </div>
             <a

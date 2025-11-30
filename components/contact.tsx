@@ -169,10 +169,10 @@ export function Contact() {
                 <div>
                   <h3 className="text-[#0a0e27] font-bold mb-1">Email</h3>
                   <a
-                    href="mailto:info@nosyradigital.com"
+                    href="mailto:info@nosyradigital.com.ng"
                     className="text-[#64748b] hover:text-[#00d4ff] transition-colors"
                   >
-                    info@nosyradigital.com
+                    info@nosyradigital.com.ng
                   </a>
                   <p className="text-[#94a3b8] text-sm mt-2">We reply within 24 hours</p>
                 </div>
