@@ -20,7 +20,7 @@ export function Hero() {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60></div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+    <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         {/* Trust badges */}
         <div className="flex flex-wrap justify-center gap-3 mb-8">
           <div className="px-4 py-2 bg-white/90 rounded-full text-[#0a0e27] text-xs md:text-sm font-medium">
