@@ -21,18 +21,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/70"></div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        {/* Trust badges */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          <div className="px-4 py-2 bg-white/90 rounded-full text-[#0a0e27] text-xs md:text-sm font-medium">
-            Fast Turnaround
-          </div>
-          <div className="px-4 py-2 bg-white/90 rounded-full text-[#0a0e27] text-xs md:text-sm font-medium">
-            Affordable Pricing
-          </div>
-          <div className="px-4 py-2 bg-white/90 rounded-full text-[#0a0e27] text-xs md:text-sm font-medium">
-            Based in Lagos
-          </div>
-        </div>
+      
 
         {/* Main headline */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">
@@ -48,7 +37,7 @@ export function Hero() {
         {/* Launch special badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00d4ff]/20 border border-[#00d4ff] rounded-full text-white text-sm md:text-base mb-8">
           <span className="animate-pulse">🚀</span>
-          <span className="font-semibold">Launch Special: First 5 clients save 40%</span>
+          <span className="font-semibold">Launch Special: First 5 clients save 20%</span>
           <span className="px-2 py-1 bg-[#00d4ff] text-[#0a0e27] rounded-full text-xs font-bold">2 SPOTS LEFT</span>
         </div>
 
