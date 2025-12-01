@@ -42,7 +42,7 @@ export function Hero() {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <a
             href="#services"
             className="px-8 py-4 bg-[#00d4ff] text-[#0a0e27] rounded-lg font-bold hover:bg-[#00b8d4] transition-all duration-300 text-base md:text-lg inline-block"
@@ -69,4 +69,4 @@ export function Hero() {
       </div>
     </section>
   )
-            }
+}
