@@ -32,18 +32,18 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link href="#home" className="flex items-center gap-2 flex-shrink-0 hover:opacity-80 transition-opacity">
-              <div className="w-16 h-16 relative">
+            <Link href="#home" className="flex items-center gap-3 flex-shrink-0 hover:opacity-80 transition-opacity">
+              <div className="w-24 h-24 relative">
                 <Image
                   src="/images/20251130-182150.png"
                   alt="Nosyra Digital"
-                  width={64}
-                  height={64}
+                  width={96}
+                  height={96}
                   className="object-contain"
                   priority
                 />
               </div>
-              <span className="text-xl font-bold text-[#0a0e27] hidden sm:inline">Nosyra</span>
+              <span className="text-2xl font-bold text-[#0a0e27] hidden sm:inline">Nosyra</span>
             </Link>
 
             {/* Desktop Menu */}
@@ -71,39 +71,24 @@ export function Header() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden text-[#00d4ff] p-2"
+              className="md:hidden p-2 text-[#0a0e27] hover:text-[#00d4ff] transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
-      </header>
 
-      {/* Mobile Menu - Slide in from right */}
-      {mobileMenuOpen && (
-        <>
-          {/* Overlay */}
-          <div
-            className="fixed inset-0 bg-black/30 z-40 md:hidden"
-            onClick={() => setMobileMenuOpen(false)}
-            style={{ animation: "fadeIn 0.3s ease-out" }}
-          />
-          {/* Slide-in menu */}
-          <div className="fixed top-0 right-0 w-64 h-screen bg-white z-40 md:hidden flex flex-col p-6 animate-slide-in-right shadow-lg">
-            <div className="flex justify-between items-center mb-8">
-              <span className="font-bold text-[#0a0e27]">Menu</span>
-              <button onClick={() => setMobileMenuOpen(false)} className="text-[#00d4ff]" aria-label="Close menu">
-                <X size={24} />
-              </button>
-            </div>
-            <nav className="flex flex-col gap-6">
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-200">
+            <nav className="px-4 py-4 space-y-4">
               {menuItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-[#0a0e27] hover:text-[#00d4ff] transition-colors font-medium text-lg"
+                  className="block text-[#64748b] hover:text-[#00d4ff] transition-colors text-sm font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -111,17 +96,15 @@ export function Header() {
               ))}
               <a
                 href="#contact"
-                className="w-full px-4 py-3 bg-[#00d4ff] text-[#0a0e27] rounded-lg font-semibold text-center mt-4 hover:bg-[#00b8d4] transition-all"
+                className="block w-full text-center px-6 py-2 bg-[#00d4ff] text-[#0a0e27] rounded-lg font-semibold hover:bg-[#00b8d4] transition-all duration-300 text-sm"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get Quote
               </a>
             </nav>
           </div>
-        </>
-      )}
-
-      <div className="h-16"></div>
+        )}
+      </header>
     </>
   )
 }
