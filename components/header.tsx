@@ -51,7 +51,7 @@ export function Header() {
                   priority
                 />
               </div>
-              <span className="text-2xl font-bold text-[#0a0e27] hidden sm:inline">Nosyra</span>
+              
             </Link>
 
             {/* Desktop Menu */}
