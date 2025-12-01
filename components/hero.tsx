@@ -31,7 +31,7 @@ export function Hero() {
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-8">
-          We build websites that turn Lagos visitors into paying customers. Fast turnaround. Affordable pricing. Real results.
+          We build websites that turn visitors into paying customers. Fast turnaround. Affordable pricing. Real results.
         </p>
 
         {/* Launch special badge */}
