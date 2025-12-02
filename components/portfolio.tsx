@@ -7,7 +7,7 @@ const projects = [
     id: 1,
     title: "TradeBridge",
     category: "E-Commerce Marketplace",
-    description: "Multi-vendor marketplace platform for online sellers and buyers",
+    description: "Multi-vendor marketplace platform showcasing advanced e-commerce features and vendor management",
     externalLink: "https://tradebridgemarket.vercel.app/",
     image: "/images/tradebrdige-screenshot.jpg",
   },
@@ -15,7 +15,7 @@ const projects = [
     id: 2,
     title: "Qlick Cleaning",
     category: "Service Booking",
-    description: "Professional cleaning services website with online booking system",
+    description: "Service booking platform demonstrating online scheduling and payment integration capabilities",
     externalLink: "https://igloo-stable-79381142.figma.site/",
     image: "/images/qlick-screenshot.jpg",
   },
@@ -23,7 +23,7 @@ const projects = [
     id: 3,
     title: "Prestige Estates",
     category: "Real Estate",
-    description: "Luxury property listings platform with advanced search",
+    description: "Property listing platform featuring advanced search, filters, and modern design patterns",
     externalLink: "https://prestigeestate.vercel.app/",
     image: "/images/prestige-screenshot.jpg",
   },
@@ -34,8 +34,8 @@ export function Portfolio() {
     <section id="portfolio" className="relative py-20 md:py-32 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0a0e27] mb-4">Our Work</h2>
-          <p className="text-lg text-[#64748b]">Real projects we've built for clients</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0a0e27] mb-4">Our Capabilities</h2>
+          <p className="text-lg text-[#64748b]">Sample projects showcasing what we can build for you</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -65,7 +65,7 @@ export function Portfolio() {
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-[#00d4ff] text-[#0a0e27] rounded font-semibold text-sm hover:bg-[#00b8d4] transition-all duration-300 text-center"
                 >
-                  View Project
+                  View Demo
                 </a>
               </div>
             </div>
@@ -73,6 +73,9 @@ export function Portfolio() {
         </div>
 
         <div className="text-center mt-12">
+          <p className="text-[#64748b] mb-6 max-w-2xl mx-auto">
+            Ready to bring your vision to life? Let's build something amazing together.
+          </p>
           <a
             href="#contact"
             className="px-8 py-4 bg-[#00d4ff] text-[#0a0e27] rounded-lg font-bold hover:bg-[#00b8d4] transition-all duration-300 inline-block"
