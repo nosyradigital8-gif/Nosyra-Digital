@@ -7,13 +7,13 @@ const benefits = [
     id: 1,
     icon: Clock,
     title: "Fast & Flexible",
-    description: "As a boutique agency, we move quickly without bureaucracy. Your project gets our full attention from day one.",
+    description: "We move quickly without bureaucracy. Your project gets our full attention and priority from start to finish.",
   },
   {
     id: 2,
     icon: Heart,
     title: "Personal Service",
-    description: "Work directly with the founder. No account managers or middlemen - just clear communication and partnership.",
+    description: "Work directly with the founder. No account managers or middlemen - just clear communication and true partnership.",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ export function Reviews() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#0a0e27] mb-4">Why Choose Nosyra Digital</h2>
-          <p className="text-lg text-[#64748b]">The advantages of working with a dedicated boutique agency</p>
+          <p className="text-lg text-[#64748b]">The advantages of working with a dedicated partner</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
