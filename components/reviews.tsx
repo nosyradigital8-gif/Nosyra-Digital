@@ -1,29 +1,31 @@
 "use client"
 
-const reviews = [
+import { Clock, Zap, Heart, TrendingUp } from "lucide-react"
+
+const benefits = [
   {
     id: 1,
-    name: "Chukwu Obi",
-    company: "TradeBridge",
-    role: "Founder",
-    text: "Nosyra Digital built a marketplace that actually works. The site is fast, looks great, and our users love it.",
-    rating: 5,
+    icon: Clock,
+    title: "Fast & Flexible",
+    description: "As a boutique agency, we move quickly without bureaucracy. Your project gets our full attention from day one.",
   },
   {
     id: 2,
-    name: "Grace Mensah",
-    company: "Qlick Cleaning",
-    role: "Business Owner",
-    text: "Professional and responsive. The website has definitely helped us get more bookings. Highly recommend!",
-    rating: 5,
+    icon: Heart,
+    title: "Personal Service",
+    description: "Work directly with the founder. No account managers or middlemen - just clear communication and partnership.",
   },
   {
     id: 3,
-    name: "Amara Nwosu",
-    company: "Prestige Estates",
-    role: "Property Manager",
-    text: "Great design and functionality. The platform showcases our properties beautifully.",
-    rating: 5,
+    icon: Zap,
+    title: "Modern Technology",
+    description: "We build with the latest web technologies - React, Next.js, and modern frameworks for fast, reliable websites.",
+  },
+  {
+    id: 4,
+    icon: TrendingUp,
+    title: "Growth-Focused",
+    description: "Your success is our success. We're building our reputation by delivering exceptional results for every client.",
   },
 ]
 
@@ -32,32 +34,44 @@ export function Reviews() {
     <section className="relative py-20 md:py-32 bg-gray-50 overflow-hidden">
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0a0e27] mb-4">What Clients Say</h2>
-          <p className="text-lg text-[#64748b]">See what our clients think about working with us</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0a0e27] mb-4">Why Choose Nosyra Digital</h2>
+          <p className="text-lg text-[#64748b]">The advantages of working with a dedicated boutique agency</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {reviews.map((review) => (
-            <div
-              key={review.id}
-              className="bg-white border border-gray-200 rounded-lg p-6 hover:border-[#00d4ff] hover:shadow-lg transition-all duration-300"
-            >
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: review.rating }).map((_, i) => (
-                  <span key={i} className="text-[#00d4ff] text-lg">
-                    ★
-                  </span>
-                ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {benefits.map((benefit) => {
+            const IconComponent = benefit.icon
+            return (
+              <div
+                key={benefit.id}
+                className="bg-white p-8 rounded-lg border border-gray-200 hover:border-[#00d4ff] hover:shadow-lg transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#00d4ff]/10 rounded-lg flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-[#00d4ff]" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-[#0a0e27] mb-2">{benefit.title}</h3>
+                    <p className="text-[#64748b] leading-relaxed">{benefit.description}</p>
+                  </div>
+                </div>
               </div>
-              <p className="text-[#64748b] mb-4 text-sm">"{review.text}"</p>
-              <div>
-                <p className="text-[#0a0e27] font-semibold text-sm">{review.name}</p>
-                <p className="text-[#94a3b8] text-xs">
-                  {review.role} at {review.company}
-                </p>
-              </div>
-            </div>
-          ))}
+            )
+          })}
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-[#64748b] mb-6 max-w-2xl mx-auto">
+            Ready to experience personalized web development? Let's discuss your project.
+          </p>
+          <a
+            href="#contact"
+            className="px-8 py-4 bg-[#00d4ff] text-[#0a0e27] rounded-lg font-bold hover:bg-[#00b8d4] transition-all duration-300 inline-block"
+          >
+            Get Your Free Quote
+          </a>
         </div>
       </div>
     </section>
