@@ -20,7 +20,7 @@ export function Hero() {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
-    <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         {/* Trust badges */}
         <div className="flex flex-wrap justify-center gap-3 mb-8">
           <div className="px-4 py-2 bg-white/90 rounded-full text-[#0a0e27] text-xs md:text-sm font-medium">
@@ -30,7 +30,7 @@ export function Hero() {
             Affordable Pricing
           </div>
           <div className="px-4 py-2 bg-white/90 rounded-full text-[#0a0e27] text-xs md:text-sm font-medium">
-            Based in Lagos
+            Global Service
           </div>
         </div>
 
@@ -42,7 +42,7 @@ export function Hero() {
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-12">
-          Professional web design and development. We help Nigerian businesses establish a powerful online presence with
+          Professional web design and development. We help businesses worldwide establish a powerful online presence with
           clean, modern websites.
         </p>
 
@@ -64,7 +64,7 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
         <div className="flex flex-col items-center gap-2">
           <span className="text-white text-sm">Scroll to explore</span>
           <div className="w-6 h-10 border-2 border-white rounded-full flex items-start justify-center p-2">
