@@ -54,23 +54,7 @@ export function Pricing() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#0a0e27] mb-4">Simple Pricing</h2>
-          <p className="text-lg text-[#64748b]">Transparent pricing with no hidden fees</p>
-        </div>
-
-        {/* Special Launch Offer Banner */}
-        <div className="bg-gradient-to-r from-[#00d4ff]/10 to-[#00d4ff]/5 border-l-4 border-[#00d4ff] rounded-lg p-6 mb-12 max-w-4xl mx-auto">
-          <div className="flex items-start gap-3">
-            <div className="flex-shrink-0 w-6 h-6 bg-[#00d4ff] rounded-full flex items-center justify-center">
-              <span className="text-white text-xs font-bold">🎉</span>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-[#0a0e27] mb-1">Early Client Offer</h3>
-              <p className="text-[#64748b] text-sm">
-                Book now and get <span className="font-bold text-[#00d4ff]">20% off any package</span> + extended support period. 
-                We're building our portfolio and want to create amazing results for you.
-              </p>
-            </div>
-          </div>
+          <p className="text-lg text-[#64748b]">Transparent pricing for all sizes</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -95,7 +79,6 @@ export function Pricing() {
 
                 <div className="mb-6">
                   <div className="text-4xl font-bold text-[#00d4ff]">{pkg.price}</div>
-                  <p className="text-xs text-[#64748b] mt-1">One-time payment</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
@@ -122,14 +105,9 @@ export function Pricing() {
           ))}
         </div>
 
-        <div className="text-center space-y-3">
-          <p className="text-[#64748b] text-sm">
-            All packages include free consultation and post-launch training.
-          </p>
-          <p className="text-[#64748b] text-sm">
-            Custom packages available. <a href="#contact" className="text-[#00d4ff] hover:underline font-semibold">Let's discuss your needs</a>.
-          </p>
-        </div>
+        <p className="text-center text-[#64748b] text-sm">
+          All packages include free consultation. Custom packages available upon request.
+        </p>
       </div>
     </section>
   )

@@ -6,7 +6,7 @@ import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 export function Header() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -16,14 +16,6 @@ export function Header() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-  useEffect(() => {
-    if (sidebarOpen) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "unset"
-    }
-  }, [sidebarOpen])
 
   const menuItems = [
     { label: "Services", href: "#services" },
@@ -40,18 +32,18 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link href="#home" className="flex items-center gap-3 flex-shrink-0 hover:opacity-80 transition-opacity">
-              <div className="w-24 h-24 relative">
+            <Link href="#home" className="flex items-center gap-2 flex-shrink-0 hover:opacity-80 transition-opacity">
+              <div className="w-16 h-16 relative">
                 <Image
                   src="/images/20251130-182150.png"
                   alt="Nosyra Digital"
-                  width={96}
-                  height={96}
+                  width={64}
+                  height={64}
                   className="object-contain"
                   priority
                 />
               </div>
-              
+              <span className="text-xl font-bold text-[#0a0e27] hidden sm:inline">Nosyra</span>
             </Link>
 
             {/* Desktop Menu */}
@@ -79,69 +71,57 @@ export function Header() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-[#0a0e27] hover:text-[#00d4ff] transition-colors"
-              onClick={() => setSidebarOpen(!sidebarOpen)}
+              className="md:hidden text-[#00d4ff] p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </header>
 
-      {/* Overlay */}
-      {sidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-40 md:hidden transition-opacity duration-300"
-          onClick={() => setSidebarOpen(false)}
-        />
+      {/* Mobile Menu - Slide in from right */}
+      {mobileMenuOpen && (
+        <>
+          {/* Overlay */}
+          <div
+            className="fixed inset-0 bg-black/30 z-40 md:hidden"
+            onClick={() => setMobileMenuOpen(false)}
+            style={{ animation: "fadeIn 0.3s ease-out" }}
+          />
+          {/* Slide-in menu */}
+          <div className="fixed top-0 right-0 w-64 h-screen bg-white z-40 md:hidden flex flex-col p-6 animate-slide-in-right shadow-lg">
+            <div className="flex justify-between items-center mb-8">
+              <span className="font-bold text-[#0a0e27]">Menu</span>
+              <button onClick={() => setMobileMenuOpen(false)} className="text-[#00d4ff]" aria-label="Close menu">
+                <X size={24} />
+              </button>
+            </div>
+            <nav className="flex flex-col gap-6">
+              {menuItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-[#0a0e27] hover:text-[#00d4ff] transition-colors font-medium text-lg"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+              <a
+                href="#contact"
+                className="w-full px-4 py-3 bg-[#00d4ff] text-[#0a0e27] rounded-lg font-semibold text-center mt-4 hover:bg-[#00b8d4] transition-all"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Get Quote
+              </a>
+            </nav>
+          </div>
+        </>
       )}
 
-      {/* Sidebar */}
-      <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
-          sidebarOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex flex-col h-full">
-          {/* Sidebar Header */}
-          <div className="flex items-center justify-between p-4 border-b border-gray-200">
-            <span className="text-xl font-bold text-[#0a0e27]">Menu</span>
-            <button
-              onClick={() => setSidebarOpen(false)}
-              className="p-2 text-[#0a0e27] hover:text-[#00d4ff] transition-colors"
-              aria-label="Close menu"
-            >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Sidebar Navigation */}
-          <nav className="flex-1 px-4 py-6 space-y-2">
-            {menuItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="block px-4 py-3 text-[#64748b] hover:text-[#00d4ff] hover:bg-gray-50 rounded-lg transition-colors text-base font-medium"
-                onClick={() => setSidebarOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-
-          {/* Sidebar CTA */}
-          <div className="p-4 border-t border-gray-200">
-            <a
-              href="#contact"
-              className="block w-full text-center px-6 py-3 bg-[#00d4ff] text-[#0a0e27] rounded-lg font-semibold hover:bg-[#00b8d4] transition-all duration-300 text-base"
-              onClick={() => setSidebarOpen(false)}
-            >
-              Get Quote
-            </a>
-          </div>
-        </div>
-      </div>
+      <div className="h-16"></div>
     </>
   )
 }
