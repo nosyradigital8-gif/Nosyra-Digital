@@ -13,14 +13,38 @@ const projects = [
   },
   {
     id: 2,
-    title: "Qlick Cleaning",
-    category: "Service Booking",
-    description: "Service booking platform demonstrating online scheduling and payment integration capabilities",
-    externalLink: "https://igloo-stable-79381142.figma.site/",
-    image: "/images/qlick-screenshot.jpg",
+    title: "Floor Decor Kumasi",
+    category: "Interior Design & Flooring",
+    description: "Elegant flooring showcase platform featuring product galleries and service information",
+    externalLink: "https://v0-floor-decor-kumasi-website.vercel.app/",
+    image: "/images/floor-decor-screenshot.jpg",
   },
   {
     id: 3,
+    title: "QuickTrads",
+    category: "Trading Platform",
+    description: "Modern trading platform interface with real-time data and intuitive user experience",
+    externalLink: "https://v0-quicktrads-website-design.vercel.app/",
+    image: "/images/quicktrads-screenshot.jpg",
+  },
+  {
+    id: 4,
+    title: "Posh Treats",
+    category: "Food Delivery",
+    description: "Delightful food ordering and delivery platform with seamless checkout experience",
+    externalLink: "https://v0-posh-treats-website.vercel.app/#delivery",
+    image: "/images/posh-treats-screenshot.jpg",
+  },
+  {
+    id: 5,
+    title: "Beyond Beddings",
+    category: "Home Furnishings",
+    description: "Luxury bedding and home décor e-commerce site with elegant product presentations",
+    externalLink: "https://v0-beyond-beddings-website.vercel.app/",
+    image: "/images/beyond-beddings-screenshot.jpg",
+  },
+  {
+    id: 6,
     title: "Prestige Estates",
     category: "Real Estate",
     description: "Property listing platform featuring advanced search, filters, and modern design patterns",
@@ -65,7 +89,7 @@ export function Portfolio() {
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-[#00d4ff] text-[#0a0e27] rounded font-semibold text-sm hover:bg-[#00b8d4] transition-all duration-300 text-center"
                 >
-                  View Demo
+                  View Project
                 </a>
               </div>
             </div>
@@ -86,4 +110,4 @@ export function Portfolio() {
       </div>
     </section>
   )
-}
+} 
