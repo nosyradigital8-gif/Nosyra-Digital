@@ -1,54 +1,78 @@
 "use client"
 
+import { useState } from "react"
+import { ChevronDown } from "lucide-react"
+
 const faqs = [
   {
     id: 1,
     question: "How long does it take to build a website?",
-    answer: "Most projects take 2-4 weeks from start to launch, depending on complexity and features. Simple websites can be completed in 1-2 weeks, while e-commerce or custom platforms may take 4-6 weeks. We'll provide a detailed timeline during our initial consultation.",
+    answer: "Most projects take 2-4 weeks from start to launch, depending on complexity and features.",
   },
   {
     id: 2,
     question: "What's included in your web design service?",
-    answer: "Our service includes custom design, responsive development, SEO optimization, performance optimization, content management system setup, contact forms, social media integration, and basic training on how to manage your site.",
+    answer: "Custom design, responsive development, SEO optimization, CMS setup, contact forms, and social media integration.",
   },
   {
     id: 3,
     question: "Do you provide ongoing support after launch?",
-    answer: "Yes! We offer flexible maintenance packages that include regular updates, security monitoring, backup management, content updates, and technical support. We're always available to help with any issues or additions you need.",
+    answer: "Yes, we offer flexible maintenance packages including updates, security monitoring, backups, and technical support.",
   },
   {
     id: 4,
     question: "Can you help with hosting and domain setup?",
-    answer: "Absolutely. We handle all technical aspects including domain registration, hosting setup, SSL certificate installation, email configuration, and DNS management. We'll ensure everything is properly configured and secure.",
+    answer: "Absolutely, we handle domain registration, hosting setup, SSL certificates, email configuration, and DNS management.",
   },
   {
     id: 5,
     question: "Will my website work on mobile devices?",
-    answer: "Every website we build is fully responsive and optimized for all devices - smartphones, tablets, laptops, and desktops. We test thoroughly across different screen sizes and browsers to ensure a perfect experience for all your visitors.",
+    answer: "Every website we build is fully responsive and optimized for all devices including smartphones, tablets, and desktops.",
   },
   {
     id: 6,
     question: "Can I update the website content myself?",
-    answer: "Yes! We build websites with user-friendly content management systems (CMS) that allow you to easily update text, images, and other content without any coding knowledge. We also provide training and documentation to help you get started.",
+    answer: "Yes, we build websites with user-friendly CMS that allow you to easily update content without coding knowledge.",
   },
   {
     id: 7,
     question: "Do you offer e-commerce solutions?",
-    answer: "Yes, we specialize in building secure e-commerce platforms with payment gateway integration, inventory management, order tracking, and customer accounts. We can integrate popular solutions like Stripe, PayPal, and Paystack.",
+    answer: "Yes, we build secure e-commerce platforms with payment integration, inventory management, and order tracking.",
   },
   {
     id: 8,
     question: "What are your payment terms?",
-    answer: "We typically require 50% upfront to begin the project and 50% upon completion before launch. For larger projects, we can arrange milestone-based payments. We accept bank transfers and all major payment methods.",
+    answer: "We require 50% upfront to begin and 50% upon completion, with milestone-based payments available for larger projects.",
   },
   {
     id: 9,
     question: "Will my website be SEO optimized?",
-    answer: "Absolutely. Every website includes on-page SEO optimization, proper meta tags, structured data, fast loading speeds, mobile optimization, and XML sitemaps. We follow best practices to help your site rank well in search engines.",
+    answer: "Absolutely, every website includes on-page SEO, meta tags, structured data, fast loading speeds, and mobile optimization.",
+  },
+  {
+    id: 10,
+    question: "Do you offer branding services?",
+    answer: "Yes, we create complete brand identities including logo design, color palettes, typography, and brand guidelines.",
+  },
+  {
+    id: 11,
+    question: "What social media design services do you provide?",
+    answer: "We design custom social media graphics, templates, story designs, carousel posts, and complete content strategies.",
+  },
+  {
+    id: 12,
+    question: "Can you redesign my existing brand?",
+    answer: "Yes, we offer brand refresh and complete rebrand services to modernize your visual identity and messaging.",
   },
 ]
 
 export function Reviews() {
+  const [openId, setOpenId] = useState<number | null>(null)
+
+  const toggleFaq = (id: number) => {
+    setOpenId(openId === id ? null : id)
+  }
+
   return (
     <section className="relative py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
       {/* Background decoration */}
@@ -57,7 +81,7 @@ export function Reviews() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
@@ -69,36 +93,42 @@ export function Reviews() {
             Frequently Asked Questions
           </h2>
           <p className="text-lg md:text-xl text-[#64748b] max-w-3xl mx-auto">
-            Everything you need to know about our services. Can't find the answer you're looking for? Feel free to contact us.
+            Everything you need to know about our web design, branding, and social media services.
           </p>
         </div>
 
-        {/* FAQ Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {faqs.map((faq, index) => (
+        {/* FAQ Accordion */}
+        <div className="space-y-4">
+          {faqs.map((faq) => (
             <div
               key={faq.id}
-              className="group bg-white border border-gray-200 rounded-2xl p-6 lg:p-8 hover:border-[#00d4ff] hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              style={{
-                animationDelay: `${index * 0.1}s`,
-              }}
+              className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-[#00d4ff] transition-all duration-300"
             >
-              {/* Question number badge */}
-              <div className="flex items-start gap-4 mb-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-[#00d4ff]/10 group-hover:bg-[#00d4ff] rounded-lg flex items-center justify-center transition-colors duration-300">
-                  <span className="text-[#00d4ff] group-hover:text-white font-bold text-sm transition-colors duration-300">
-                    {String(faq.id).padStart(2, '0')}
-                  </span>
-                </div>
-                <h3 className="flex-1 text-[#0a0e27] font-bold text-lg lg:text-xl leading-tight">
+              <button
+                onClick={() => toggleFaq(faq.id)}
+                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
+              >
+                <span className="text-[#0a0e27] font-semibold text-base md:text-lg pr-4">
                   {faq.question}
-                </h3>
+                </span>
+                <ChevronDown
+                  className={`w-5 h-5 text-[#00d4ff] flex-shrink-0 transition-transform duration-300 ${
+                    openId === faq.id ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  openId === faq.id ? "max-h-96" : "max-h-0"
+                }`}
+              >
+                <div className="px-6 pb-5 pt-2">
+                  <p className="text-[#64748b] text-sm md:text-base leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
-
-              {/* Answer */}
-              <p className="text-[#64748b] text-sm lg:text-base leading-relaxed pl-14">
-                {faq.answer}
-              </p>
             </div>
           ))}
         </div>
@@ -123,4 +153,4 @@ export function Reviews() {
       </div>
     </section>
   )
-}
+  }
