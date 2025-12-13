@@ -42,8 +42,8 @@ export function Hero() {
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-12">
-          Professional web design and development. We help businesses worldwide establish a powerful online presence with
-          clean, modern websites.
+          Professional web design, branding, and social media designs. We help businesses worldwide establish a powerful online presence with
+          clean, modern websites and compelling visual identities.
         </p>
 
         {/* CTA Buttons */}
@@ -74,4 +74,4 @@ export function Hero() {
       </div>
     </section>
   )
-}
+          }
