@@ -1,6 +1,6 @@
 "use client"
 
-import { Code, ShoppingCart, Smartphone, Megaphone } from "lucide-react"
+import { Code, ShoppingCart, Smartphone, Megaphone, Palette, Share2 } from "lucide-react"
 
 const services = [
   {
@@ -27,6 +27,18 @@ const services = [
     description: "SEO optimization and online visibility solutions",
     icon: Megaphone,
   },
+  {
+    id: 5,
+    title: "Branding & Identity",
+    description: "Logo design, brand guidelines, and visual identity systems",
+    icon: Palette,
+  },
+  {
+    id: 6,
+    title: "Social Media Design",
+    description: "Eye-catching graphics and templates for your social platforms",
+    icon: Share2,
+  },
 ]
 
 export function Services() {
@@ -35,32 +47,47 @@ export function Services() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0a0e27] mb-4">What We Offer</h2>
-          <p className="text-lg text-[#64748b] max-w-2xl mx-auto">
-            Complete digital solutions tailored to your business needs
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a0e27] mb-4">
+            Our Services
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+            Comprehensive digital solutions to help your business thrive online
           </p>
         </div>
 
         {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => {
             const Icon = service.icon
             return (
               <div
                 key={service.id}
-                className="p-8 bg-white rounded-lg border border-gray-200 hover:border-[#00d4ff] hover:shadow-lg transition-all duration-300 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="mb-6 p-4 bg-[#00d4ff]/10 rounded-lg w-fit group-hover:bg-[#00d4ff]/20 transition-colors">
-                  <Icon className="w-6 h-6 text-[#00d4ff]" />
+                <div className="w-14 h-14 bg-[#00d4ff]/10 rounded-lg flex items-center justify-center mb-6">
+                  <Icon className="w-7 h-7 text-[#00d4ff]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0a0e27] mb-3">{service.title}</h3>
-                <p className="text-[#64748b]">{service.description}</p>
+                <h3 className="text-xl font-bold text-[#0a0e27] mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
               </div>
             )
           })}
         </div>
+
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <a
+            href="#contact"
+            className="inline-block px-8 py-4 bg-[#00d4ff] text-[#0a0e27] rounded-lg font-bold hover:bg-[#00b8d4] transition-all duration-300"
+          >
+            Get Started Today
+          </a>
+        </div>
       </div>
     </section>
   )
-}
+    }
