@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState } from "react"
@@ -12,7 +13,7 @@ const pricingCategories = [
       {
         id: 1,
         name: "Starter",
-        price: "₦80,000",
+        price: "₦250,000",
         description: "Perfect for small businesses",
         features: [
           "5-page website",
@@ -26,7 +27,7 @@ const pricingCategories = [
       {
         id: 2,
         name: "Professional",
-        price: "₦150,000",
+        price: "₦400,000",
         description: "Most popular choice",
         popular: true,
         features: [
@@ -41,7 +42,7 @@ const pricingCategories = [
       {
         id: 3,
         name: "Enterprise",
-        price: "₦250,000+",
+        price: "₦600,000+",
         description: "Custom solutions",
         features: [
           "Unlimited pages",
@@ -62,7 +63,7 @@ const pricingCategories = [
       {
         id: 4,
         name: "Basic Logo",
-        price: "₦50,000",
+        price: "₦250,000",
         description: "Essential brand identity",
         features: [
           "Logo design (3 concepts)",
@@ -76,35 +77,28 @@ const pricingCategories = [
       {
         id: 5,
         name: "Brand Identity",
-        price: "₦120,000",
+        price: "₦350,000",
         description: "Complete visual identity",
         popular: true,
         features: [
           "Logo design (5 concepts)",
           "Unlimited revisions",
-          "All file formats (AI, EPS, PDF, PNG, JPG, SVG)",
+          "All file formats",
           "Brand color palette",
           "Typography guidelines",
-          "Business card design",
-          "Letterhead design",
           "Brand style guide",
-          "2 weeks delivery",
         ],
       },
       {
         id: 6,
         name: "Premium Package",
-        price: "₦200,000",
+        price: "₦500,000+",
         description: "Full brand experience",
         features: [
           "Everything in Brand Identity",
           "Brand strategy consultation",
-          "Comprehensive brand guidelines (PDF)",
-          "Social media kit (templates)",
+          "Social media kit",
           "Presentation template",
-          "Email signature design",
-          "Packaging concepts (if applicable)",
-          "3 weeks delivery",
           "3 months support",
         ],
       },
@@ -118,47 +112,39 @@ const pricingCategories = [
       {
         id: 7,
         name: "Starter Pack",
-        price: "₦40,000",
+        price: "₦250,000",
         description: "Get started on social",
         features: [
           "10 custom post designs",
-          "2 social media platforms",
-          "Basic templates",
-          "Brand color integration",
+          "2 platforms",
+          "Brand-aligned templates",
           "2 revision rounds",
-          "PNG/JPG formats",
         ],
       },
       {
         id: 8,
         name: "Growth Pack",
-        price: "₦80,000",
+        price: "₦350,000",
         description: "Consistent content flow",
         popular: true,
         features: [
-          "20 custom post designs",
-          "All major platforms (IG, FB, Twitter, LinkedIn)",
+          "20 post designs",
+          "All major platforms",
           "Editable templates",
-          "Story/Reel templates (5)",
-          "Carousel designs (3)",
           "Unlimited revisions",
-          "Source files included",
         ],
       },
       {
         id: 9,
         name: "Pro Monthly",
-        price: "₦150,000/mo",
+        price: "₦500,000/mo",
         description: "Full content management",
         features: [
           "40+ posts per month",
-          "All platforms covered",
-          "Video graphics & animations",
-          "Story highlights design",
-          "Ad creative designs",
-          "Content calendar included",
-          "Priority support",
-          "Monthly strategy consultation",
+          "Video & motion graphics",
+          "Ad creatives",
+          "Content calendar",
+          "Monthly strategy call",
         ],
       },
     ],
